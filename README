@@ -1,0 +1,70 @@
+# MERN Event Management Backend
+This is a backend application built using the MERN stack that supports user authentication, event creation, and RSVP functionality. The project is designed as part of an internship assignment to demonstrate backend development skills using Node.js, Express, MongoDB, and JWT
+## Features
+ User registration with password hashing
+ User login with JWT authentication
+ Create events
+ View all events
+ RSVP to events with capacity validation
+ Prevent duplicate RSVPs
+ MongoDB Atlas integration
+## Tech Stack
+ Node.js
+ Express.js
+ MongoDB (Atlas)
+ Mongoose
+ JSON Web Token (JWT)
+ bcryptjs
+## Project Structure
+mern-event-app
+├── server
+│ ├── models
+│ │ ├── User.js
+│ │ └── Event.js
+│ ├── routes
+│ │ ├── auth.js
+│ │ └── events.js
+│ ├── index.js
+│ └── package.json
+├── .gitignore
+└── README.md
+**POST** `/api/auth/register`  
+  Register a new user
+
+ **POST** `/api/auth/login`  
+  Login user and receive JWT token
+### Events
+
+ **POST** `/api/events/create`  
+  Create a new event
+
+ **GET** `/api/events`  
+  Fetch all events
+
+ **POST** `/api/events/rsvp/:eventId`  
+  RSVP to an event
+
+## Environment Variables
+The project uses environment variables for sensitive configuration.
+
+Create a `.env` file inside the `server` folder with the following:
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+
+> Note: Environment variables are excluded from the repository for security reasons.
+
+## How to Run the Project
+
+1. Clone the repository
+2. Navigate to the `server` folder
+3. Install dependencies:
+npm install
+4. Add `.env` file with MongoDB URI
+5. Start the server:
+node index.js
+6. Server will run on `http://localhost:5000`
+
+## Author
+Nishitha Pasupuleti
+## Notes
+This project focuses on backend functionality. Frontend integration can be added as an extension.
